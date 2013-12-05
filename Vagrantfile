@@ -125,3 +125,10 @@ Vagrant::Config.run do |config|
   config.vm.provision :puppet
 
 end
+
+Vagrant.configure("2") do |config|
+  config.vm.box = 'squeeze'
+  config.cache.auto_detect = true
+  # If you are using VirtualBox, you might want to enable NFS for shared folders
+  # config.cache.enable_nfs  = true
+end
